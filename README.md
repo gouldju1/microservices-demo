@@ -1,9 +1,9 @@
 # Microservices Lecture and Demo
-See [the notebook]() for all examples.
+See [the notebook](https://github.com/gouldju1/microservices-demo/blob/main/Microservices%20Demo.ipynb) for all examples.
 ## Justin A. Gould (gould29@purdue.edu)
 ## January 2021
 
-[The notebook]() will provide examples of:
+[The notebook](https://github.com/gouldju1/microservices-demo/blob/main/Microservices%20Demo.ipynb) will provide examples of:
 - Lecture on Microservices and APIs:
   - What are Microservices and APIs?
   - How to Create Microservices (in Python)
