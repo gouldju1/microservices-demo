@@ -4,7 +4,7 @@ import os
 import re
 
 #Load Model    
-base = "C:\\Users\\sf781\\Desktop\\Cummins Annotation Data"
+base = "/Users/gould29/OneDrive - purdue.edu/Purdue/The Data Mine/AY 2020-2021/Cummins"
 model = "tmp_model_14"
 model_path = os.path.join(base, model)
 nlp = spacy.load(model_path)
