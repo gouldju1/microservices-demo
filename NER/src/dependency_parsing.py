@@ -60,7 +60,7 @@ def dep_students(params):
     text = params["text"]
     
     #Run model
-    doc = nlp(text)
+    doc = dp_model(text)
     
     dep_list = []
     
