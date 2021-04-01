@@ -37,6 +37,14 @@ def dp_model():
     output = dependency_parsing.dp(p)
     return jsonify({'output': output})
 
+#DP Students
+@app.route('/dep_students', methods=["POST"])
+def dep_students_model():
+    #Run Function
+    p = request.get_json()
+    output = dependency_parsing.dep_students(p)
+    return jsonify({'output': output})
+
 #Map DP and NER
 @app.route('/map_dp_ner', methods=["POST"])
 def map_dp_ner():
