@@ -4,7 +4,7 @@ import os
 import re
 
 #Load Model    
-base = "/Users/gould29/OneDrive - purdue.edu/Purdue/The Data Mine/AY 2020-2021/Cummins"
+base = "/Users/gould29/OneDrive - purdue.edu/Purdue/The Data Mine/AY 2020-2021/Cummins/NLP Models"
 model = "ner_model"
 model_path = os.path.join(base, model)
 nlp = spacy.load(model_path)

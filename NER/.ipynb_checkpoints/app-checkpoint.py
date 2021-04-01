@@ -9,7 +9,7 @@ if package_path not in sys.path:
     sys.path.append(package_path)
     
 #Internal Package(s)
-from src import ner, dependency_parsing, utils#, polarity
+from src import ner, dependency_parsing, utils#, norma
 
 #Establish App
 app = Flask(__name__)
@@ -46,11 +46,11 @@ def map_dp_ner():
     return jsonify({'output': output})
 
 # #Polarity
-# @app.route('/polarity', methods=["POST"])
-# def polarity_model():
+# @app.route('/norma_polarity', methods=["POST"])
+# def norma_polarity_model():
 #     #Run Function
 #     p = request.get_json()
-#     output = polarity.predict_polarity(p)
+#     output = norma.norma_polarity(p)
 #     return jsonify({'output': output})
 
 #Run Application
