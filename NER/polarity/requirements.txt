@@ -1,0 +1,10 @@
+The model doesn't require anything fancy to be imported.
+
+libraries:
+- Torch
+- Numpy
+- Transformers -> BertTokenizer, BertModel |  (pip install)
+- Torch.nn
+- Torch.optim
+
+At the top of the model.py file, replace the path= filepath to the location of the 10epochRNN.pt file

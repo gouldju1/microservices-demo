@@ -5,7 +5,7 @@ import re
 
 #Load Model    
 base = "/Users/gould29/OneDrive - purdue.edu/Purdue/The Data Mine/AY 2020-2021/Cummins"
-model = "tmp_model_14"
+model = "ner_model"
 model_path = os.path.join(base, model)
 nlp = spacy.load(model_path)
 
@@ -41,7 +41,7 @@ def ner(params):
     data = {}
     for ent in doc.ents:
         #Preprocess entity text------
-        ent_text = ent.text
+        ent_text = str(ent.text)
         #LABEL in TEXT
         ent_text = ent_text.replace(ent.label_, "")
 
@@ -58,6 +58,10 @@ def ner(params):
 
         #If label does not exist, create
         else:
-            data[ent.label_] = [ent_text]
+            data[str(ent.label_)] = [ent_text]
+    
+    #Remove Duplicated
+    for key in data:
+        data[key] = list(set(data[key]))
     
     return data
