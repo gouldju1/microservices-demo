@@ -20,7 +20,7 @@ def map_dp_and_ner(params):
     return data
 
 #Map Norma PA and DP
-def dp_and_pa_norma_map(dp_mapped, polarities):
+def dp_and_pa_approach_b_map(dp_mapped, polarities):
     for part in dp_mapped:
         causal_parts = []
         #Get List of Verbs for Part

@@ -82,7 +82,7 @@ def output_formatting(preds, internal):
 
     
 #Final Pipeline
-def norma_polarity(params):
+def approach_b_polarity(params):
     #Unpack Parameters
     text = params["text"].lower()
     
