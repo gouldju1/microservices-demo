@@ -21,12 +21,16 @@ def map_dp_and_ner(params):
 
 #Map Norma PA and DP
 def dp_and_pa_approach_b_map(dp_mapped, polarities):
-    for part in dp_mapped:
+    if len(dp_mapped) >0 :
+        for part in dp_mapped:
+            causal_parts = []
+            #Get List of Verbs for Part
+            verbs = dp_mapped[part]
+            for verb in verbs:
+                if verb in polarities["negative_words"]:
+                    causal_parts.append(part)
+    
+    else:
         causal_parts = []
-        #Get List of Verbs for Part
-        verbs = dp_mapped[part]
-        for verb in verbs:
-            if verb in polarities["negative_words"]:
-                causal_parts.append(part)
 
     return causal_parts
